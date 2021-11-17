@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////
+// МАКРОСЫ ИСПОЛЬЗУЕМЫЕ В ОСНОВНОМ ФАЙЛЕ ПРОЕКТА
+////////////////////////////////////////////////////
+
+//объявить обрабочтик состояния в который переходит конечный автомат участника системы (КА)
+#define HNDL(funcname) \
+	void funcname(MSG msg)
+
+//добавить обработчик состояния в список обработчкиов КА участника системы
+#define ADDHDL(objST, cls, handler, funcname) \
+	_fsm->AddHNDL(##objST::##handler, \
+		std::bind(##cls::##handler, this, std::placeholders::_1), ##funcname);
+
+//получитть значение параметра (par) из сообщения
+#define GET_VAL(par) \
+	SD::Get().GetValueFromMsg(PAR::##par, msg._params)
+
+//получитть пару ключ-значение параметра (par=value) из сообщения
+#define GET_KEY_VAL(par) \
+	SD::Get().GetKeyNValueFromMsg(PAR::##par, msg._params)
+
+//получить строку &ключ=значение для предоставленных имени пар-ра и значения
+#define SET_KEY_VAL(par,value) \
+	SD::Get().SetKeyNValueForMsg(PAR::##par, ##value)
+
+//записать в лог данные для операции посылки сообщения КА участника
+#define M_TO_LOG FSM()->PushToLog(msg)
+
+
+
+//#define SET_VAL(par,value) \
+//	SD::Get().SetValue(PAR::##par, ##newval, msg._params)
+//#define VALS_EQUAL(left,right) \
+//	 (SD::Get().GetValueFromMsg(PAR::##left, msg._params) == ##right)
+
+

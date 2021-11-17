@@ -1,0 +1,7 @@
+bankomat2 ** HANDLER = waiting_for_card         ** EV = card_inserted            ** PARS = &card_number=2222-2222-2222-2222
+bankomat2 ** HANDLER = waiting_for_pin          ** EV = card_inserted            ** PARS = &card_number=2222-2222-2222-2222
+bankomat2 ** HANDLER = waiting_bank_reply_pin   ** EV = pin_correct              ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222
+bankomat2 ** HANDLER = requesting_amount        ** EV = empty_event              ** PARS = 
+bankomat2 ** HANDLER = waiting_bank_reply_amount** EV = enough_money             ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222&withdraw_amount=34
+bankomat2 ** HANDLER = issuing_money            ** EV = empty_event              ** PARS = 
+bankomat2 ** HANDLER = ejecting_card            ** EV = empty_event              ** PARS = 

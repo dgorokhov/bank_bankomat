@@ -1,0 +1,19 @@
+bank      ** HANDLER = waiting_orders           ** EV = shutdown_processing      ** PARS = 
+bank      ** HANDLER = shutting_down            ** EV = shutdown_processing      ** PARS = 
+bank      ** HANDLER = shutting_down            ** EV = shutdown_processing      ** PARS = 
+bank      ** HANDLER = waiting_orders           ** EV = got_pin                  ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222
+bank      ** HANDLER = checking_pin             ** EV = got_pin                  ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222
+bank      ** HANDLER = waiting_orders           ** EV = got_pin                  ** PARS = &card_number=1111-1111-1111-1111&pin_code=1111
+bank      ** HANDLER = checking_pin             ** EV = got_pin                  ** PARS = &card_number=1111-1111-1111-1111&pin_code=1111
+bank      ** HANDLER = waiting_orders           ** EV = got_withdraw_amount      ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222&withdraw_amount=34
+bank      ** HANDLER = checking_withdraw_ok     ** EV = got_withdraw_amount      ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222&withdraw_amount=34
+bank      ** HANDLER = waiting_orders           ** EV = got_withdraw_amount      ** PARS = &card_number=1111-1111-1111-1111&pin_code=1111&withdraw_amount=22
+bank      ** HANDLER = checking_withdraw_ok     ** EV = got_withdraw_amount      ** PARS = &card_number=1111-1111-1111-1111&pin_code=1111&withdraw_amount=22
+bank      ** HANDLER = waiting_orders           ** EV = client_took_money        ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222&withdraw_amount=34
+bank      ** HANDLER = updating_account         ** EV = client_took_money        ** PARS = &card_number=2222-2222-2222-2222&pin_code=2222&withdraw_amount=34
+bank      ** HANDLER = waiting_orders           ** EV = bankomat_stopped         ** PARS = 
+bank      ** HANDLER = on_stopping_bankomat     ** EV = bankomat_stopped         ** PARS = 
+bank      ** HANDLER = waiting_orders           ** EV = client_took_money        ** PARS = &card_number=1111-1111-1111-1111&pin_code=1111&withdraw_amount=22
+bank      ** HANDLER = updating_account         ** EV = client_took_money        ** PARS = &card_number=1111-1111-1111-1111&pin_code=1111&withdraw_amount=22
+bank      ** HANDLER = waiting_orders           ** EV = bankomat_stopped         ** PARS = 
+bank      ** HANDLER = on_stopping_bankomat     ** EV = bankomat_stopped         ** PARS = 

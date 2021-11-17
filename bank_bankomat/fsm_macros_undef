@@ -1,0 +1,9 @@
+
+#define HNDL(funcname)
+#define ADDHDL(objST, cls, handler)
+#define VALS_EQUAL(left,right)
+#define GET_VAL(par)
+#define GET_KEY_VAL(par)
+#define SET_KEY_VAL(par,value)
+//#define SET_VAL(par,value) \
+//	SD::Get().SetValue(PAR::##par, ##newval, msg._params)

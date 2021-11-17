@@ -1,0 +1,24 @@
+
+	//соответствие между кодом события системы
+	//и его строковым представлением
+	ADDEVENT(stop_processing, "stop_processing");
+	ADDEVENT(empty_event, "empty_event");
+	ADDEVENT(card_inserted, "card_inserted");
+	ADDEVENT(got_pin, "got_pin");
+	ADDEVENT(pin_correct, "pin_correct");
+	ADDEVENT(pin_wrong, "pin_wrong");
+	ADDEVENT(got_withdraw_amount, "got_withdraw_amount");
+	ADDEVENT(client_took_money, "client_took_money");
+	ADDEVENT(client_forgot_money, "client_forgot_money");
+	ADDEVENT(enough_money, "enough_money");
+	ADDEVENT(not_enough_money, "not_enough_money");
+	ADDEVENT(account_updated, "account_updated");
+	ADDEVENT(shutdown_processing, "shutdown_processing");
+	ADDEVENT(bankomat_stopped, "bankomat_stopped");
+
+	//соответствие между именем параметра
+	//сообщений участников и его строковым представлением
+	ADDPARAM(no_param, "no_param");
+	ADDPARAM(pin_code, "pin_code");
+	ADDPARAM(card_number, "card_number");
+	ADDPARAM(withdraw_amount, "withdraw_amount");
